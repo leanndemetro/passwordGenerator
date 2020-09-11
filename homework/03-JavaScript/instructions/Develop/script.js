@@ -1,8 +1,10 @@
 // variable arrays 
-var upCase 
-var lowCase 
-var specChar 
-var num 
+var upCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var lowCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var specChar = ["!","#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".",":",";", "<", "=", ">", "?", "@","[","/","]", "^", "_", "`", "{", "|", "}", "~"];
+var num = ["0","1","2","3","4","5","6","7","8","9"];
+var minLength = ["8"];
+var maxLength = ["128"];
 
 // Assignment Code-connects variable to button
 var generateBtn = document.querySelector("#generate");
@@ -22,32 +24,70 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
 
   // this will appear as a prompt box when generate password button is clicked
-  var charCount = prompt("Choose a password length from 8-128 characters");
-  var upperCase = prompt("Include uppercase characters?");
-  var lowerCase = prompt("Include lowercase characters?");
-  var specialChar = prompt("Include special characters?");
-  var numbers = prompt("Include numbers?");
+  var charCount = prompt ("Choose a password length from 8-128 characters");
+    
+  if (charCount == minLength || charCount <= maxLength){
+      alert("TEST");
+    }
 
-  if (charCount.length > 8 || charCount.length < 128) 
-  
+    else {
+      alert("TEST");
+    }
+             
+  var upperCase = confirm ("Include uppercase characters?");
+   
+  if (upperCase == "null" || upperCase == null || upperCase == "" ){
+     alert("cancelled");
+   }
+
+   else {
+     alert("WORKING");
+   }
+
+  var lowerCase = confirm ("Include lowercase characters?");
+
+  if (upperCase == "null" || upperCase == null || upperCase == "" ){
+    alert("cancelled");
+  }
+
+  else {
+    alert("WORKING");
+  }
+
+  var specialChar = confirm ("Include special characters?");
+
+  if (upperCase == "null" || upperCase == null || upperCase == "" ){
+    alert("cancelled");
+  }
+
+  else {
+    alert("WORKING");
+  }
+
+  var numbers = confirm ("Include numbers?");
+
+  if (upperCase == "null" || upperCase == null || upperCase == "" ){
+    alert("cancelled");
+  }
+
+  else {
+    alert("WORKING");
+  }
+
+
    
 
-  if (upperCase == "yes") {
-
-  }
-
-  if (lowerCase == "yes") {
-
-  }
-
-  if (specialChar == "yes") {
-
-  }
-
-  if (numbers == "yes") {
-
-  }
-
 }
+
+
+
+
+  
+
+
+
+  
+ 
+
 
 
